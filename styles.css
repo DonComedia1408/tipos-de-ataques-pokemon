@@ -1,0 +1,262 @@
+body {
+    font-family: Arial;
+    max-height: 1000px;
+}
+#intro {
+    position: absolute;
+    z-index: 2;
+    width: 99%;
+    height: 99%;
+    margin:0;
+    animation: Salida 1s linear 2s 1 normal forwards;
+}
+#fondoDeIntro {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 3;
+    object-fit: cover;
+}
+#pokeball {
+    position: absolute;
+    z-index: 4;
+    bottom: 40%;
+    right: 40%;
+    animation: Entrada 1s linear 0s 1 normal forwards, Giro 1s linear 0s infinite normal forwards;
+}
+#textoDeIntro {
+    position: absolute;
+    z-index: 4;
+    right: 37%;
+    bottom: 25%;
+    font-size: 75px;
+    animation: Entrada 1s linear 0s 1 normal forwards;
+}
+@keyframes Entrada {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes Giro {
+	0% {
+		transform: rotate(0);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+@keyframes Salida {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+#titulo {
+    justify-content: center;
+    width: 100%;
+}
+#tituloIzquierda {
+    width: 5%;
+    height: 5%;
+    display: inline;
+    animation: izquierda 4s linear 0s infinite normal forwards;
+}
+#tituloTexto {
+    bottom: 50%;
+    font-size: 100px;
+    display: inline;
+}
+#tituloDerecha {
+    width: 5%;
+    height: 5%;
+    display: inline;
+    animation: derecha 4s linear 0s infinite reverse forwards;
+}
+@keyframes izquierda {
+	0% {
+		transform: rotate(0);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+@keyframes derecha {
+	0% {
+		transform: rotate(0);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+#TipoElegir {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+button {
+    border: none;
+    background-color: white;
+    margin: 10px;
+    opacity: 0.33;
+    border-radius: 10px;
+    border-color: black;
+    border-style: solid;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.9);
+    transition: all 0.3s ease-in-out !important;
+    cursor: pointer;
+}
+button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.8);
+    opacity: 1 !important;
+}
+#todo {
+    animation: EntradaTodo 1s linear 2s 1 normal forwards;
+    position: relative;
+    opacity: 0;
+    z-index: 2;
+}
+@keyframes EntradaTodo {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+#Reiniciar {
+    text-align: center;
+    width: 100%;
+}
+#BotonReinicio {
+    align-self: center;
+    border-radius: 10px;
+    width: 85px;
+    height: 30px;
+    background-color: white;
+    cursor: not-allowed;
+}
+
+#BotonReinicio:hover {
+    animation: temblor 0.3s ease-in-out infinite;
+}
+@keyframes temblor {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-3px); }
+    50% { transform: translateX(3px); }
+    75% { transform: translateX(-3px); }
+    100% { transform: translateX(0); }
+}
+h1, h2, p {
+    text-align: center;
+}
+table {
+    text-align: center;
+    width: 100%;
+}
+#tituloTabla {
+    height: 120px;
+    font-size: xx-large;
+}
+td {
+    border: solid;
+    height: 20px
+}
+#a {
+    height: 560px;
+    object-fit: cover;
+    overflow: hidden;
+    width: 10%;
+}
+#b {
+    text-align: center;
+    width: 15%;
+    min-height: 100px;
+    max-height: 700px;
+}
+#c {
+    width: 15%;
+    height: 100px;
+}
+#d {
+    width: 15%;
+    height: 100px;
+}
+#e {
+    width: 10%;
+    height: 100px;
+}
+#mejorMovimiento {
+    width: 15%;
+}
+#f {
+    width: 20%;
+}
+.github {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 20);
+    border: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+    cursor: pointer;
+    transition-duration: .3s;
+    overflow: hidden;
+    position: relative;
+}
+
+.svgIcon {
+    width: 12px;
+    transition-duration: .3s;
+}
+
+.svgIcon path {
+    fill: white;
+}
+
+.github:hover {
+    width: 140px;
+    border-radius: 50px;
+    transition-duration: .3s;
+    background-color: rgb(162, 0, 255);
+    align-items: center;
+}
+
+.github:hover .svgIcon {
+    width: 50px;
+    transition-duration: .3s;
+    transform: translateY(70%);
+}
+
+.github::before {
+    position: absolute;
+    top: -20px;
+    content: "Github";
+    color: white;
+    transition-duration: .3s;
+    font-size: 2px;
+}
+
+.github:hover::before {
+    font-size: 13px;
+    opacity: 1;
+    transform: translateY(30px);
+    transition-duration: .3s;
+}
+  

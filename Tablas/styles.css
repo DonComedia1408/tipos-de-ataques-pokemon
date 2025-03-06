@@ -1,0 +1,165 @@
+body {
+    font-family: Arial;
+}
+#intro {
+    position: absolute;
+    z-index: 2;
+    width: 99%;
+    height: 99%;
+    margin:0;
+    animation: Salida 1s linear 2s 1 normal forwards;
+    overflow: hidden;
+}
+#fondoDeIntro {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 3;
+    object-fit: cover;
+}
+#pokeball {
+    position: absolute;
+    z-index: 4;
+    bottom: 40%;
+    right: 40%;
+    animation: Entrada 1s linear 0s 1 normal forwards, Giro 1s linear 0s infinite normal forwards;
+}
+#textoDeIntro {
+    position: absolute;
+    z-index: 4;
+    bottom: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 75px;
+    animation: Entrada 1s linear 0s 1 normal forwards;
+    display: inline-block;
+}
+@keyframes Entrada {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes Giro {
+	0% {
+		transform: rotate(0);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+@keyframes Salida {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+#tituloIzquierda {
+    width: 5%;
+    height: 5%;
+    display: inline;
+    animation: izquierda 4s linear 0s infinite normal forwards;
+}
+#tituloTexto {
+    bottom: 50%;
+    font-size: 90px;
+    display: inline;
+}
+#tituloDerecha {
+    width: 5%;
+    height: 5%;
+    display: inline;
+    animation: derecha 4s linear 0s infinite reverse forwards;
+}
+@keyframes izquierda {
+	0% {
+		transform: rotate(0);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+@keyframes derecha {
+	0% {
+		transform: rotate(0);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+button {
+    border: none;
+    background-color: white;
+    margin: 10px;
+    border-radius: 10px;
+    opacity: 0.33;
+    border-color: black;
+    border-style: solid;
+    transition: all 0.3s ease-in-out !important;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.9);
+    cursor: pointer;
+}
+#btn {
+    animation: EntradaTabla 1s linear 2s 1 normal forwards;
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+}
+@keyframes EntradaTabla {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+        opacity: 1;
+	}
+}
+button:hover {
+    cursor: pointer;
+    transform: translateY(-5px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.8);
+    opacity: 1 !important;
+    animation: temblor 0.3s ease-in-out infinite;
+}
+@keyframes temblor {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-3px); }
+    50% { transform: translateX(3px); }
+    75% { transform: translateX(-3px); }
+    100% { transform: translateX(0); }
+}
+table {
+    width: 80%;
+    text-align: center;
+}
+tr {
+    height: 50px;
+}
+td {
+    border: solid;
+    background-color: white;
+}
+#nombre {
+    width: 30%;
+}
+#tipo {
+    width: 25%;
+}
+#precision {
+    width: 15%;
+}
+#potencia {
+    width: 15%;
+}
+#pp {
+    width: 15%
+}

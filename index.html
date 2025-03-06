@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" href="Iconos/favicon.png" />
+    <link rel="stylesheet" href="./styles.css">
+    <title>Ataques de pokemon</title>
+  </head>
+  <body>
+    <div id="intro">
+    <center>
+    <img src="Iconos/Pokeball.png" id="pokeball">
+    <img src="Iconos/intro.jpg" id="fondeDeIntro">
+    <h1 id="textoDeIntro">¡BIENVENIDO!</h1>
+    </center>
+    </div>
+    <div id="todo">
+    <div id="titulo">
+    <center>
+    <img src="Iconos/Pokeball.png" id="tituloIzquierda">        
+    <h1 id="tituloTexto">TIPOS DE ATAQUES POKEMON</h1>
+    <img src="Iconos/Pokeball.png" id="tituloDerecha">
+    </center>  
+    </div>
+    <br>
+    <h2>Seleccione el tipo de ataque que desea</h2>
+    <br>
+    <img src="Iconos/Icon_Sin.png" id="sinInv" hidden>
+    <div id="TipoElegir">
+        <button id="ElegirAcero" class="btn">
+            <img src="Iconos/Icon_Acero.webp" alt="Botón de acero" id="acero">
+            <p>Acero</p>
+        </button>
+        <button id="ElegirAgua" class="btn">
+            <img src="Iconos/Icon_Agua.webp" alt="Botón de agua" id="agua">
+            <p>Agua</p>
+        </button>
+        <button id="ElegirBicho" class="btn">
+            <img src="Iconos/Icon_Bicho.webp" alt="Botón de bicho" id="bicho">
+            <p>Bicho</p>
+        </button>
+        <button id="ElegirDragon" class="btn">
+            <img src="Iconos/Icon_Dragon.webp" alt="Botón de dragon" id="dragon">
+            <p>Dragon</p>
+        </button>
+        <button id="ElegirElectrico" class="btn">
+            <img src="Iconos/Icon_Electrico.webp" alt="Botón de electrico" id="electrico">
+            <p>Electrico</p>
+        </button>
+        <button id="ElegirFantasma" class="btn">
+            <img src="Iconos/Icon_Fantasma.webp" alt="Botón de fantasma" id="fantasma">
+            <p>Fantasma</p>
+        </button>
+        <button id="ElegirFuego" class="btn">
+            <img src="Iconos/Icon_Fuego.webp" alt="Botón de fuego" id="fuego">
+            <p>Fuego</p>
+        </button>
+        <button id="ElegirHada" class="btn">
+            <img src="Iconos/Icon_Hada.webp" alt="Botón de hada" id="hada">
+            <p>Hada</p>
+        </button>
+        <button id="ElegirHielo" class="btn">
+            <img src="Iconos/Icon_Hielo.webp" alt="Botón de hielo" id="hielo">
+            <p>Hielo</p>
+        </button>
+        <button id="ElegirLucha" class="btn">
+            <img src="Iconos/Icon_Lucha.webp" alt="Botón de lucha" id="lucha">
+            <p>Lucha</p>
+        </button>
+        <button id="ElegirNormal" class="btn">
+            <img src="Iconos/Icon_Normal.webp" alt="Botón de normal" id="normal">
+            <p>Normal</p>
+        </button>
+        <button id="ElegirPlanta" class="btn">
+            <img src="Iconos/Icon_Planta.webp" alt="Botón de planta" id="planta">
+            <p>Planta</p>
+        </button>
+        <button id="ElegirPsiquico" class="btn">
+            <img src="Iconos/Icon_Psiquico.webp" alt="Botón de psiquico" id="psiquico">
+            <p>Psiquico</p>
+        </button>
+        <button id="ElegirRoca" class="btn">
+            <img src="Iconos/Icon_Roca.webp" alt="Botón de roca" id="roca">
+            <p>Roca</p>
+        </button>
+        <button id="ElegirSiniestro" class="btn">
+            <img src="Iconos/Icon_Siniestro.webp" alt="Botón de siniestro" id="siniestro">
+            <p>Siniestro</p>
+        </button>
+        <button id="ElegirTierra" class="btn">
+            <img src="Iconos/Icon_Tierra.webp" alt="Botón de tierra" id="tierra">
+            <p>Tierra</p>
+        </button>
+        <button id="ElegirVeneno" class="btn">
+            <img src="Iconos/Icon_Veneno.webp" alt="Botón de veneno" id="veneno">
+            <p>Veneno</p>
+        </button>
+        <button id="ElegirVolador" class="btn">
+            <img src="Iconos/Icon_Volador.webp" alt="Botón de volador" id="volador">
+            <p>Volador</p>
+        </button>
+    </div>
+    <br>
+    <br>
+    <div id="Reiniciar">
+        <button id="BotonReinicio" class="btn" disabled="true">
+            REINICIAR
+        </button>
+    </div>
+    <br>
+    <h2 id="TipoElegido">Esperando selección...</h2>
+    <table id="TablaTipo">
+        <tr id="tituloTabla">
+            <td>Tipo</td>
+            <td>Eficaz (160% daño)</td>
+            <td>Regular (100% daño)</td>
+            <td>Poco eficaz (63% daño)</td>
+            <td>Ineficaz (39% daño)</td>
+            <td>Mejor movimiento de este tipo</td>
+            <td>Mejor pokemon de este tipo</td>
+        </tr>
+        <tr>
+            <td id="a"><img id="tipo" src="Iconos/Icon_Sin.png"></td>
+            <td id="b"><center>
+                <img id="eficaz1" src="Iconos/Icon_Sin.png">
+                <img id="eficaz2" src="Iconos/Icon_Sin.png">
+                <img id="eficaz3" src="Iconos/Icon_Sin.png">
+                <img id="eficaz4" src="Iconos/Icon_Sin.png">
+                <img id="eficaz5" src="Iconos/Icon_Sin.png">
+            </center></td>
+            <td id="c"><center>
+                <img id="regular1" src="Iconos/Icon_Sin.png">
+                <img id="regular2" src="Iconos/Icon_Sin.png">
+                <img id="regular3" src="Iconos/Icon_Sin.png">
+                <img id="regular4" src="Iconos/Icon_Sin.png">
+                <img id="regular5" src="Iconos/Icon_Sin.png">
+                <img id="regular6" src="Iconos/Icon_Sin.png">
+                <img id="regular7" src="Iconos/Icon_Sin.png">
+                <img id="regular8" src="Iconos/Icon_Sin.png">
+                <img id="regular9" src="Iconos/Icon_Sin.png">
+                <img id="regular10" src="Iconos/Icon_Sin.png">
+                <img id="regular11" src="Iconos/Icon_Sin.png">
+                <img id="regular12" src="Iconos/Icon_Sin.png">
+                <img id="regular13" src="Iconos/Icon_Sin.png">
+                <img id="regular14" src="Iconos/Icon_Sin.png">
+                <img id="regular15" src="Iconos/Icon_Sin.png">
+            </center></td>
+            <td id="d"><center>
+                <img id="pocoEficaz1" src="Iconos/Icon_Sin.png">
+                <img id="pocoEficaz2" src="Iconos/Icon_Sin.png">
+                <img id="pocoEficaz3" src="Iconos/Icon_Sin.png">
+                <img id="pocoEficaz4" src="Iconos/Icon_Sin.png">
+                <img id="pocoEficaz5" src="Iconos/Icon_Sin.png">
+                <img id="pocoEficaz6" src="Iconos/Icon_Sin.png">
+                <img id="pocoEficaz7" src="Iconos/Icon_Sin.png">
+                <img id="pocoEficaz8" src="Iconos/Icon_Sin.png">
+                <img id="pocoEficaz9" src="Iconos/Icon_Sin.png">
+                <img id="pocoEficaz10" src="Iconos/Icon_Sin.png">
+            </center></td>
+            <td id="e"><center>
+                <img id="ineficaz" src="Iconos/Icon_Sin.png">
+            </center></td>
+            <td id="mejorMovimiento"><center>
+                <h2 id="nombreMovimiento"></h2>
+                <p id="descripcionMovimiento"></p>
+                <a href="" id="linkMovimientos" class="btn"></a>
+            </center></td>
+            <td id="f"><center>
+                <h2 id="nombrePokemon"></h2>
+                <p id="numeroPokemon"></p>
+                <p id="tipoPokemon"></p>
+                <p id="habilidad"></p>
+                <p id="ps"></p>
+                <p id="ataqueN"></p>
+                <p id="defensaN"></p>
+                <p id="ataqueE"></p>
+                <p id="defensaE"></p>
+                <p id="velocidad"></p>
+                <p id="total"></p>
+                <p id="descripcion"></p>
+
+            </center></td>
+        </tr>
+    </table>
+    <br>
+    <a href="https://github.com/DonComedia1408">
+    <button class="github">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="svgIcon"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+    </button>
+    </a>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
